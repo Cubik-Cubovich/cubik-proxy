@@ -1,12 +1,16 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "destination": "https://cubik-s.ru"
-    },
-    {
       "source": "/:path*",
-      "destination": "https://cubik-s.ru:path*"
+      "destination": "https://cubik-s.ru*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Forwarded-Host", "value": "origin.cubik-s.ru" }
+      ]
     }
   ]
 }
