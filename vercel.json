@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
+      "source": "/",
+      "destination": "https://cubik-s.ru"
+    },
+    {
       "source": "/:path*",
-      "destination": "https://cubik-s.ru*"
+      "destination": "https://cubik-s.ru:path*"
     }
   ]
 }
